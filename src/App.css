@@ -1,0 +1,22 @@
+.app-container {
+  /* Centering the card with gradient background */
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+input,
+button {
+  border-radius: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2b6cb0; /* Darker shade for hover */
+}
+
+.toast {
+  background-color: #38a169; /* Customize toast color */
+}

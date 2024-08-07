@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  background: #FFEEEE;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #000000;
+
+}
+
+.main-content {
+  margin-top: 5rem; /* Adjust to avoid overlap with navbar */
+  text-align: center;
+}
+
+.password-generator-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-top: 10px; /* Adjusted gap */
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(105, 104, 104, 0.123);
+  padding-top:2rem;
+  padding-bottom: 3rem;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(255, 255, 255);
+  color: #282828;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.button-copy {
+  transition: background-color 0.2s ease;
+}
+
+.button-copy:hover {
+ /* color:#7b7b7b; */
+ color: blue;
+}
+
+.button-copy:active {
+  cursor: copy;
+}
+
+.recent-passwords {
+  background: #7e7d7d92;
+  padding: 10px;
+  color: white;
+  border-radius: 15px;
+  list-style-type: none;
+}
+
+.recent-passwords li {
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  color: rgb(16, 68, 212);
+}
+
+input[type="checkbox"],
+input[type="range"],
+label {
+  color: white;
+}
+
+label {
+  font-size: 14px;
+  margin-left: 0.5rem;
+}
+
+/* Base styles for larger screens */
+.navbar {
+  background: #ababab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #d0e6aa1b, #f5e3e310); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  backdrop-filter: blur(10px);
+  color: rgb(28, 28, 28);
+  border: 2px solid rgba(41, 41, 41, 0.137);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 20rem); /* Adjust width to account for larger screens */
+  margin: 1rem 10rem; /* Add margin for spacing */
+  top: 0;
+  z-index: 100;
+  border-radius: 10px; /* Make the navbar rounded */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Styles for screens less than 900px */
+@media (max-width: 900px) {
+  .navbar {
+    width: calc(100% - 8rem); /* Adjust width for medium screens */
+    margin: 1rem 4rem; /* Adjust margin for medium screens */
+  }
+}
+
+/* Styles for screens less than 420px */
+@media (max-width: 420px) {
+  .navbar {
+    width: calc(100% - 4rem); /* Adjust width for small screens */
+    margin: 1rem 2rem; /* Adjust margin for small screens */
+  }
+}
+
+
+.footer {
+  background-color: rgba(17, 17, 17, 0);
+  backdrop-filter: blur(10px);
+  color: rgb(0, 0, 0);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  border: 0.5px solid rgba(0, 0, 0, 0.247);
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
+}
+
+.button-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #f5f5ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.text-link {
+ color:rgb(28, 28, 28);
+  text-decoration: underline;
+}

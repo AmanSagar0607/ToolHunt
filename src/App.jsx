@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import "./index.css";
 import { FaClipboard, FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { VscCoffee } from "react-icons/vsc";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [length, setLength] = useState(8);
@@ -152,11 +153,14 @@ function App() {
             </ul>
           </div>
         </div>
+        
 
         {showToast && (
           <div className="toast text-sm">Password copied!</div>
         )}
       </div>
+
+      <Analytics/>
 
       <footer className="footer ">
         <div className=" gap-5 mb-1">PassGen &copy; 2024</div>

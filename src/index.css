@@ -8,16 +8,13 @@ body, html {
 }
 
 .app-container {
-  background: #FFEEEE;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  /* background-image: radial-gradient(circle, #9e71f6, #ab8af8, #c6b7f5, #c7b9f7, #d7d0f4, #dfdaf3, #e7e5f1, #efefef, #efefef, #f0f0f0, #f0f0f0, #f0f0f0); */
+  background: black;
   background-size: cover;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: #000000;
-
+  color: #ffffff;
 }
 
 .main-content {
@@ -39,7 +36,7 @@ body, html {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(105, 104, 104, 0.123);
-  padding-top:2rem;
+  padding-top: 2rem;
   padding-bottom: 3rem;
   padding-left: 18px;
   padding-right: 18px;
@@ -51,7 +48,7 @@ body, html {
   left: 50%;
   transform: translateX(-50%);
   background: rgb(255, 255, 255);
-  color: #282828;
+  color: #ffffff;
   padding: 10px;
   border-radius: 10px;
   font-size: 12px;
@@ -64,8 +61,7 @@ body, html {
 }
 
 .button-copy:hover {
- /* color:#7b7b7b; */
- color: blue;
+  color: blue;
 }
 
 .button-copy:active {
@@ -105,15 +101,32 @@ label {
   background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #d0e6aa1b, #f5e3e310); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   backdrop-filter: blur(10px);
-  color: rgb(28, 28, 28);
+  color: rgb(255, 255, 255);
   border: 2px solid rgba(41, 41, 41, 0.137);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: calc(100% - 20rem); /* Adjust width to account for larger screens */
-  margin: 1rem 10rem; /* Add margin for spacing */
+  width: calc(100% - 10rem); /* Adjust width to account for larger screens */
+  margin: 1rem 5rem; /* Add margin for spacing */
+  top: 0;
+  z-index: 100;
+  border-radius: 10px; /* Make the navbar rounded */
+  font-weight: bold; /* Make the text bold */
+}
+
+.landing-nav {
+  backdrop-filter: blur(0px);
+  color: rgb(255, 255, 255);
+  border:1px solid rgba(113, 113, 113, 0.141);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 10rem); /* Adjust width to account for larger screens */
+  margin: 1rem 5rem; /* Add margin for spacing */
   top: 0;
   z-index: 100;
   border-radius: 10px; /* Make the navbar rounded */
@@ -134,22 +147,24 @@ label {
     width: calc(100% - 4rem); /* Adjust width for small screens */
     margin: 1rem 2rem; /* Adjust margin for small screens */
   }
+  .landing-nav {
+    width: calc(100% - 4rem); /* Adjust width for small screens */
+    margin: 1rem 2rem; /* Adjust margin for small screens */
+  }
 }
-
 
 .footer {
   background-color: rgba(17, 17, 17, 0);
   backdrop-filter: blur(10px);
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  margin-top: 50px;
   border: 0.5px solid rgba(0, 0, 0, 0.247);
   width: 100%;
-  bottom: 0;
   z-index: 100;
 }
 
@@ -164,6 +179,113 @@ label {
 }
 
 .text-link {
- color:rgb(28, 28, 28);
+  color: rgb(255, 255, 255);
   text-decoration: underline;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 420px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text-link {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  background: #55545413;
+}
+
+/* Styles for cards */
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  width: 400px;
+  margin: 5px;
+  margin-top: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #2a9d8f;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3a59d5;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 480px) {
+  .cards-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* Inspiration Page Styles */
+.inspiration-page .header {
+  background-color: #f5f5f5;
+}
+
+.inspiration-page .content {
+  padding: 2rem;
+}
+
+.inspiration-page .card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.inspiration-page .card:hover {
+  box-shadow: 0 6px 12px rgb(255, 255, 255);
+}
+
+.footer-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ffffff;
 }

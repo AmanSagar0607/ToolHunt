@@ -34,8 +34,8 @@ const Navbar = () => {
         <Link to="/" className="no-underline hover:text-gray-300">
           Home
         </Link>
-        <Link to="/" className="no-underline hover:text-gray-300">
-        <a
+        <Link to="https://buymeacoffee.com/amansagar" className="no-underline hover:text-gray-300">
+          <a
             href="https://buymeacoffee.com/amansagar"
             target="_blank"
             rel="noopener noreferrer"
@@ -115,6 +115,7 @@ const Navbar = () => {
           >
             <VscCoffee className="h-7 w-7" />
           </a>
+
           <a
             href="https://www.producthunt.com/posts/toolhunt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-toolhunt"
             target="_blank"

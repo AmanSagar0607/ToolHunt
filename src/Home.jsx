@@ -408,8 +408,8 @@ const Home = () => {
               {/* Developer Mode text */}
               {card.id >= 7 && card.id <= 42 && (
                 <div className="absolute inset-0 flex items-center justify-center cursor-not-allowed bg-black bg-opacity-100 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-white text-lg font-bold">
-                    Coming Soon
+                  <span className="bg-gradient-to-br from-sky-800 via-violet-200 to-sky-200 bg-clip-text text-transparent text-lg font-bold">
+                  Activating soon!
                   </span>
                 </div>
               )}

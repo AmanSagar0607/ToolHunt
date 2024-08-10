@@ -12,6 +12,7 @@ import {
   FaTag,
   FaDev,
 } from "react-icons/fa";
+import { IoLogoFoursquare } from "react-icons/io";
 import { BsStars, BsEmojiSmileUpsideDown } from "react-icons/bs";
 import { BiSolidColor } from "react-icons/bi";
 import { RiAiGenerate, RiCoupon3Line } from "react-icons/ri";
@@ -88,7 +89,7 @@ const Home = () => {
     {
       id: 5,
       title: "Logos",
-      icon: <FaTag className="text-green-400" />,
+      icon: <IoLogoFoursquare className="text-green-400" />,
       content: "Find logo design tools",
       link: "/logos",
     },
@@ -406,7 +407,7 @@ const Home = () => {
               <p>{card.content}</p>
 
               {/* Developer Mode text */}
-              {card.id >= 7 && card.id <= 42 && (
+              {card.id === 5 || card.id >= 7 && card.id <= 42 && (
                 <div className="absolute inset-0 flex items-center justify-center cursor-not-allowed bg-black bg-opacity-100 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="bg-gradient-to-br from-sky-800 via-violet-200 to-sky-200 bg-clip-text text-transparent text-lg font-bold">
                   Activating soon!

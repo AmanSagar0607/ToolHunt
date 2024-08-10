@@ -19,6 +19,7 @@ import {
   FiFeather,
   FiUnderline,
 } from "react-icons/fi"; // Outline icons for typography
+import { RiLockPasswordLine } from "react-icons/ri";
 import Navbar from "./../Navbar";
 import Footer from "./../Footer";
 
@@ -32,7 +33,7 @@ const Passwords = () => {
   ];
 
   const titleToIconMap = {
-    "Beautiful Dingbats": <FiFeather />,
+    "PassGen": <RiLockPasswordLine />,
     "Google Fonts": <FaFonticonsFi />,
     "Font Squirrel": <FiBold />,
     DaFont: <FiItalic />,

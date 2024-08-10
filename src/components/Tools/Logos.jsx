@@ -1,24 +1,18 @@
 import { useState } from "react";
-import { FaPalette, FaDownload, FaLink, FaFonticonsFi, FaSearch } from "react-icons/fa";
-import { GoPackage } from "react-icons/go";
-import { CiPalette } from "react-icons/ci";
-import { FaSpaceAwesome } from "react-icons/fa6";
-import { ImFont } from "react-icons/im";
-import { CiSearch } from "react-icons/ci";
-import { CiText } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import { FaArrowLeft,FaSearch  } from 'react-icons/fa';
+import { GiDustCloud } from "react-icons/gi";
+import { LuBird } from "react-icons/lu";
+import { RiFontSansSerif } from "react-icons/ri";
+import { GiTacos } from "react-icons/gi";
+import { FaBook } from "react-icons/fa6";
+import { TbBrandFiverr } from "react-icons/tb";
+import { SiGamemaker } from "react-icons/si";
+import { MdOutlineSoupKitchen } from "react-icons/md";
+import { FaRegPenToSquare } from "react-icons/fa6";
+import { AiOutlineAntDesign } from "react-icons/ai";
+import { IoIosCheckboxOutline } from "react-icons/io";
 // import { LuPalette } from "react-icons/lu";
-import {
-  FiType,
-  FiEdit,
-  FiBookOpen,
-  FiPenTool,
-  FiBold,
-  FiItalic,
-  FiFeather,
-  FiUnderline,
-} from "react-icons/fi"; // Outline icons for typography
 import Navbar from "./../Navbar";
 import Footer from "./../Footer";
 
@@ -41,32 +35,16 @@ const Logos = () => {
   ];
 
   const titleToIconMap = {
-    "Beautiful Dingbats": <FiFeather />,
-    "Google Fonts": <FaFonticonsFi />,
-    "Font Squirrel": <FiBold />,
-    DaFont: <FiItalic />,
-    "Abstract Fonts": <FiUnderline />,
-    "CSSans Pro": <CiText />,
-    Ficture: <FiPenTool />,
-    "Color Font": <FaPalette />,
-    FontPair: <FiEdit />,
-    Freebiesbug: <FiBookOpen />,
-    "Download Fonts": <FaDownload />,
-    "Leon Sans": <FiType />,
-    "FontPairing ByPeople": <FaLink />,
-    Typewolf: <CiText />,
-    "Font In Logo": <FiBold />,
-    Fontbundles: <GoPackage />,
-    "Handwritten.js": <FiFeather />,
-    "Ztext.js": <FiType />,
-    Colorsandfonts: <CiPalette />,
-    Calligrapher: <FiFeather />,
-    "Text to Handwriting": <CiText />,
-    Fontshare: <FaFonticonsFi />,
-    "Font Space": <FaSpaceAwesome />,
-    "Font In Use": <ImFont />,
-    "What Font Is": <CiSearch />,
-    "Pousse ta fonte": <FiPenTool />,
+    "Logo Dust": <GiDustCloud  />,
+    "Logobook": <FaBook/>,
+    "Hatchful": <LuBird  />,
+    "Logo Maker": <SiGamemaker/>,
+    "LogoTaco": <GiTacos />,
+    "Fiverr Logo Maker": <TbBrandFiverr/>,
+    "DesignEvo": <AiOutlineAntDesign />,
+    "Logo To Use": <IoIosCheckboxOutline/>,
+    "IconKitchen": <MdOutlineSoupKitchen />,
+    "Free Logos": <FaRegPenToSquare/>,
   };
 
   const handleSearch = (query) => {
@@ -134,7 +112,7 @@ const Logos = () => {
               className="card border p-4 rounded shadow flex flex-col items-center justify-center transition-all duration-300 hover:bg-black hover:text-white text-center"
             >
               <div className="text-4xl mb-4">
-                {titleToIconMap[resource.title] || <FaFonticonsFi />}{" "}
+                {titleToIconMap[resource.title] || <RiFontSansSerif/>}{" "}
                 {/* Default icon if title not found */}
               </div>
               <h2 className="text-sm font-bold mb-4 p-2 rounded-2xl">

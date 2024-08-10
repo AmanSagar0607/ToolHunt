@@ -29,15 +29,6 @@ const Passwords = () => {
 
   const passwordsResources = [
     { id: 1, title: "PassGen", link: "/passgen" },
-    { id: 2, title: "Logobook", link: "https://logobook.com" },
-    { id: 3, title: "Hatchful", link: "https://hatchful.shopify.com" },
-    { id: 4, title: "Logo Maker", link: "https://www.logomaker.com" },
-    { id: 5, title: "LogoTaco", link: "https://logotaco.com" },
-    { id: 6, title: "Fiverr Logo Maker", link: "https://www.fiverr.com/logo-maker" },
-    { id: 7, title: "DesignEvo", link: "https://www.designevo.com" },
-    { id: 8, title: "Logo To Use", link: "https://www.logotouse.com" },
-    { id: 9, title: "IconKitchen", link: "https://www.iconkitchen.com" },
-    { id: 10, title: "Free Logos", link: "https://freelogos.com" },
   ];
 
   const titleToIconMap = {

@@ -136,7 +136,7 @@ const Colors = () => {
         </button>
       </div>
       <div className="main-content">
-        <h1 className="text-center text-white text-2xl -sm:mt-0 -mt-10 sm:text-3xl font-bold">
+        <h1 className="text-center text-white text-2xl -sm:mt-0 -mt-10  sm:text-3xl font-bold">
           Colors
         </h1>
         {/* <p className="text-center text-gray-300 text-lg mt-2 sm:text-xl">

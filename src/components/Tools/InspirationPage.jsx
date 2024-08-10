@@ -117,7 +117,7 @@ const Inspiration = () => {
         </button>
       </div>
       <div className="main-content">
-        <h1 className="text-center text-white text-2xl -sm:mt-0 -mt-4 sm:text-3xl font-black">
+        <h1 className="text-center text-white text-2xl -sm:mt-0 -mt-10 sm:text-3xl font-black">
           Design Inspiration
         </h1>
 

@@ -343,7 +343,7 @@ const Home = () => {
   );
 
   const handleBackClick = () => {
-    navigate(-1); // Navigate to the previous page
+    navigate(-2); // Navigate to the previous page
   };
 
   

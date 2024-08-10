@@ -2,20 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 .app-container {
-  /* background-image: radial-gradient(circle, #9e71f6, #ab8af8, #c6b7f5, #c7b9f7, #d7d0f4, #dfdaf3, #e7e5f1, #efefef, #efefef, #f0f0f0, #f0f0f0, #f0f0f0); */
-  background: black;
-  background-size: cover;
+  background-color: #000000;
+  opacity: 1;
+  background-image: radial-gradient(#ffffff37 0.5px, #0000001a 0.5px);
+  background-size: 20px 15px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   color: #ffffff;
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
 }
+.passgen-nav {
+  background-color: #000000;
+  opacity: 1;
+  background-image: radial-gradient(#ffffff37 0.5px, #0000001a 0.5px);
+  background-size: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #ffffff;
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+}
+.app-container::before {
+  background-color: #000000;
+  opacity: 1;
+  background-image: radial-gradient(#ffffff0a 0.5px, #00000023 0.5px);
+  background-size: 12px 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #ffffff;
+  z-index: -1;
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+}
+
 
 .main-content {
   margin-top: 5rem; /* Adjust to avoid overlap with navbar */
@@ -23,11 +51,16 @@ body, html {
 }
 
 .password-generator-section {
+  /* background-color: #000000; */
+  opacity: 1;
+  background-image: radial-gradient(#ffffff51 0.5px, #0000006e 0.5px);
+  background-size: 20px 15px;
+  display: flex;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
-  margin-top: 10px; /* Adjusted gap */
 }
 
 .glass-card {
@@ -36,7 +69,7 @@ body, html {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(105, 104, 104, 0.123);
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-bottom: 3rem;
   padding-left: 18px;
   padding-right: 18px;
@@ -44,10 +77,10 @@ body, html {
 
 .toast {
   position: fixed;
-  bottom: 10%;
+  bottom: 25%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgb(255, 255, 255);
+  background: rgb(27, 27, 27);
   color: #ffffff;
   padding: 10px;
   border-radius: 10px;
@@ -69,19 +102,25 @@ body, html {
 }
 
 .recent-passwords {
-  background: #7e7d7d92;
+  background: #15151592;
   padding: 10px;
-  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.152);
+  color: rgb(198, 198, 198);
   border-radius: 15px;
   list-style-type: none;
 }
 
 .recent-passwords li {
   margin-bottom: 5px;
+  padding-left: 10px;
 }
 
 input[type="text"] {
-  color: rgb(16, 68, 212);
+  color: rgb(0, 0, 0);
+}
+
+.passInput input[type="text"] {
+  color: rgb(255, 255, 255);
 }
 
 input[type="checkbox"],
@@ -97,12 +136,9 @@ label {
 
 /* Base styles for larger screens */
 .navbar {
-  background: #ababab;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #d0e6aa1b, #f5e3e310); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   backdrop-filter: blur(10px);
   color: rgb(255, 255, 255);
-  border: 2px solid rgba(41, 41, 41, 0.137);
+  border: 2px solid rgba(110, 110, 110, 0.207);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -119,7 +155,7 @@ label {
 .landing-nav {
   backdrop-filter: blur(0px);
   color: rgb(255, 255, 255);
-  border:1px solid rgba(113, 113, 113, 0.141);
+  border: 1px solid rgba(20, 20, 20, 0.141);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -132,7 +168,67 @@ label {
   border-radius: 10px; /* Make the navbar rounded */
   font-weight: bold; /* Make the text bold */
 }
+/* Styles for screens less than 420px */
+@media (max-width: 420px) {
+  .landing-nav {
+    width: 100%; /* Adjust width for small screens */
+   padding: 5px; /* Adjust margin for small screens */
+    flex-direction: row; /* Stack ToolHunt and ProductHunt vertically */
+    align-items: center;
+    padding-top: 15px;
+  }
+  .passgen-nav {
+    background-color: #000000;
+    opacity: 1;
+    background-image: radial-gradient(#ffffff55 0.5px, #0000003c 0.5px);
+    background-size: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #ffffff;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  }
+  .app-container {
+    background-color: #000000;
+    opacity: 1;
+    background-image: radial-gradient(#ffffff31 0.5px, #0000006e 0.5px);
+    background-size: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #ffffff;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  }
+  .landing-nav a:first-child {
+    font-size: 1.5rem; /* Make ToolHunt text smaller */
+    margin-left: 2px; /* Add margin to create a gap */
+  }
 
+  .landing-nav .space-x-4 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .landing-nav .space-x-4 a {
+    margin-top: 15px; /* Create gap between ToolHunt and ProductHunt badge */
+  }
+  .landing-nav .space-x-4 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .landing-nav .space-x-4 a {
+    margin-top: 5px; /* Create gap between ToolHunt and ProductHunt badge */
+  }
+
+}
+
+
+/* .landing-sub-text:hover{
+  background:#575757;
+} */
 /* Styles for screens less than 900px */
 @media (max-width: 900px) {
   .navbar {
@@ -197,6 +293,7 @@ label {
 
   .navbar .flex {
     flex-direction: column;
+    background: #030303;
   }
 }
 
@@ -204,33 +301,45 @@ label {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.2rem;
   padding: 1rem;
   margin-left: 5rem;
   margin-right: 5rem;
-  background: #55545413;
+  background: #0b0b0b8d;
 }
 
 /* Styles for cards */
+/* Existing styles for cards */
+/*  */
+.cards {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+/* Styles for cards */
 .card {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(14, 14, 14);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 2rem;
-  width: 400px;
-  margin: 5px;
-  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Updated border style */
+  padding: 2.3rem;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth transitions */
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(101, 101, 101, 0.2);
+  background: rgb(0, 0, 0);
 }
+
+
 
 .btn {
   padding: 0.5rem 1rem;
@@ -254,7 +363,7 @@ label {
     align-items: center;
     padding: 0.5rem;
   }
-  
+
   .card {
     width: 100%;
     max-width: 300px;
@@ -288,4 +397,8 @@ label {
   width: 1.5rem;
   height: 1.5rem;
   color: #ffffff;
+}
+
+.getstarted {
+  background: #e81717;
 }

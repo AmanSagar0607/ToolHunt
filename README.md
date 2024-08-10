@@ -1,28 +1,27 @@
-# PassGen
+# ToolHunt
 
-PassGen is a modern password generator built with React and Vite, styled using Tailwind CSS. This tool allows users to generate strong, customizable passwords with ease. With features like copy-to-clipboard, string length adjustment, and the inclusion of numbers and special characters, PassGen aims to provide a user-friendly and secure password generation experience.
+ToolHunt is a modern tool finder built with React and Vite, styled using Tailwind CSS. This platform allows designers and developers to discover and explore top tools and resources with ease. With features like customizable search, categorized listings, and a sleek user interface, ToolHunt aims to provide a user-friendly experience for finding the best tools to unleash your creativity.
 
 ## Features
 
-- **Password Generation**: Generate passwords with customizable length from 8 to 32 characters.
-- **Character Options**: Include or exclude numbers and special characters based on user preferences.
-- **Copy to Clipboard**: Easily copy generated passwords to the clipboard with a single click.
-- **Recent Passwords**: View and copy recently generated passwords from history.
+- **Tool Discovery**: Find and explore a curated list of top tools and resources for designers and developers.
+- **Customizable Search**: Easily search for tools by category, name, or specific features.
+- **Categorized Listings**: Tools are organized into categories, making it easy to find exactly what you need.
 - **Responsive Design**: Ensures a seamless experience on both desktop and mobile devices.
-- **Modern UI**: Styled using Tailwind CSS and integrated with React Icons for a sleek look.
+- **Modern UI**: Styled using Tailwind CSS and integrated with React Icons for a sleek and intuitive look.
 
 ## Installation
 
-To get started with PassGen, follow these steps:
+To get started with ToolHunt, follow these steps:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/AmanSagar0607/passgen.git
+    git clone https://github.com/AmanSagar0607/toolhunt.git
     ```
 
 2. **Navigate to the Project Directory**:
     ```bash
-    cd passgen
+    cd toolhunt
     ```
 
 3. **Install Dependencies**:
@@ -46,11 +45,10 @@ To get started with PassGen, follow these steps:
 
 ## Usage
 
-- **Adjust Length**: Use the range slider to set the desired password length (8-32 characters).
-- **Select Options**: Toggle checkboxes to include numbers and special characters in the generated password.
-- **Generate Password**: Click the button to generate a new password.
-- **Copy Password**: Click the copy icon to copy the generated password to your clipboard.
-- **Recent Passwords**: View and copy recent passwords from the history list.
+- **Search Tools**: Use the search bar to find tools by category, name, or specific features.
+- **Explore Categories**: Browse through different categories to discover tools tailored to your needs.
+- **View Details**: Click on a tool to view more details and links to access the tool.
+- **Save Favorites**: Mark tools as favorites for easy access later.
 
 ## Contributing
 

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer flex sm:flex-row  flex-col items-center justify-center w-full bg-gray-400 text-footer-text">
     <div className="gap-4 sm:pl-12  pl-0 pt-3 sm:pt-2 sm:mb-2 mb-5 text-center">
-    Made with ❤️ in India by <br />
+    Made with ❤️ in India <br />
   <span className="block sm:inline">Created by <a href="https://linktr.ee/amansagar0607" className="hover:underline">Aman Sagar</a></span>
 </div>
 

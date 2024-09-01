@@ -5,7 +5,7 @@ const Footer = ({ isDarkMode }) => {
   return (
     <footer
       className={`footer flex sm:flex-row flex-col items-center justify-between w-full mt-6 sm:mt-20 sm:mb-8 mb-4 ${
-        isDarkMode ? 'bg-[#373737] text-white' : ' text-black'
+        isDarkMode ? 'text-white' : ' text-black'
       } p-4`}
     >
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">

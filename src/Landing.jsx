@@ -95,7 +95,7 @@ const Landing = () => {
           <Link to="/" className="no-underline hover:text-gray-300">
             Submit Tool
           </Link> */}
-          {/* <a
+          <a
             href="https://buymeacoffee.com/amansagar"
             target="_blank"
             rel="noopener noreferrer"
@@ -105,9 +105,9 @@ const Landing = () => {
             <VscCoffee
               className={`h-6 w-6 ${isDarkMode ? "text-white" : "text-black"}`}
             />
-          </a> */}
+          </a>
 
-          {/* <button
+          <button
             onClick={handleThemeToggle}
             className="text-lg flex items-center justify-center p-2 rounded-lg transition-transform transform hover:scale-105"
             title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
@@ -117,7 +117,7 @@ const Landing = () => {
             ) : (
               <FaMoon className="transition-transform duration-300 ease-in-out" />
             )}
-          </button> */}
+          </button>
         </div>
 
         <div className="flex items-center space-x-4">
@@ -171,7 +171,7 @@ const Landing = () => {
             ToolHunt
           </Link> */}
 
-            {/* <a
+            {/* {/* <a
               href="https://buymeacoffee.com/amansagar"
               target="_blank"
               rel="noopener noreferrer"
@@ -185,13 +185,13 @@ const Landing = () => {
               />
             </a> */}
 
-            {/* <button
+             <button
               onClick={toggleTheme}
               className="text-lg flex items-center justify-center p-2 rounded-lg transition-transform transform hover:scale-105 mt-2"
               title={
                 isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"
               }
-            >
+            > 
               <div
                 className={`transition-transform duration-300 ease-in-out ${
                   rotateIcon ? "rotate-0" : "rotate-180"
@@ -203,7 +203,7 @@ const Landing = () => {
                   <IoMoonOutline className="transition-transform duration-300 ease-in-out" />
                 )}
               </div>
-            </button> */}
+            </button> 
 
             <a
               href="https://www.producthunt.com/posts/toolhunt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-toolhunt"

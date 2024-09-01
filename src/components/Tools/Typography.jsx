@@ -1,33 +1,19 @@
 import { useState } from "react";
-import { FaPalette, FaDownload, FaLink, FaFonticonsFi, FaSearch } from "react-icons/fa";
-import { GoPackage } from "react-icons/go";
-import { CiPalette } from "react-icons/ci";
-import { FaSpaceAwesome } from "react-icons/fa6";
-import { ImFont } from "react-icons/im";
-import { CiSearch } from "react-icons/ci";
-import { CiText } from "react-icons/ci";
-import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
-// import { LuPalette } from "react-icons/lu";
-import {
-  FiType,
-  FiEdit,
-  FiBookOpen,
-  FiPenTool,
-  FiBold,
-  FiItalic,
-  FiFeather,
-  FiUnderline,
-} from "react-icons/fi"; // Outline icons for typography
-import Navbar from "./../Navbar";
-import Footer from "./../Footer";
+// import { useNavigate } from "react-router-dom";
+import ScrollToTopButton from "../ScrollToTopButton";
+import { FaSearch } from "react-icons/fa";
+// import { FaArrowLeft } from "react-icons/fa";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
+// import { BsStars } from "react-icons/bs";
 
 const Typography = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [setSuggestions] = useState([]);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
-  const typographyResources = [
+  const resources = [
     { id: 1, title: "Beautiful Dingbats", link: "https://beautifuldingbats.com" },
     { id: 2, title: "Google Fonts", link: "https://fonts.google.com" },
     { id: 3, title: "Font Squirrel", link: "https://www.fontsquirrel.com" },
@@ -54,41 +40,20 @@ const Typography = () => {
     { id: 24, title: "Font In Use", link: "https://fontinuse.com" },
     { id: 25, title: "What Font Is", link: "https://www.whatfontis.com" },
     { id: 26, title: "Pousse ta fonte", link: "https://poussetafonte.com" },
+    // Add more items as needed
   ];
+  // const toggleDarkMode = () => {
+  //   setIsDarkMode(!isDarkMode);
+  // };
 
-  const titleToIconMap = {
-    "Beautiful Dingbats": <FiFeather />,
-    "Google Fonts": <FaFonticonsFi />,
-    "Font Squirrel": <FiBold />,
-    DaFont: <FiItalic />,
-    "Abstract Fonts": <FiUnderline />,
-    "CSSans Pro": <CiText />,
-    Ficture: <FiPenTool />,
-    "Color Font": <FaPalette />,
-    FontPair: <FiEdit />,
-    Freebiesbug: <FiBookOpen />,
-    "Download Fonts": <FaDownload />,
-    "Leon Sans": <FiType />,
-    "FontPairing ByPeople": <FaLink />,
-    Typewolf: <CiText />,
-    "Font In Logo": <FiBold />,
-    Fontbundles: <GoPackage />,
-    "Handwritten.js": <FiFeather />,
-    "Ztext.js": <FiType />,
-    Colorsandfonts: <CiPalette />,
-    Calligrapher: <FiFeather />,
-    "Text to Handwriting": <CiText />,
-    Fontshare: <FaFonticonsFi />,
-    "Font Space": <FaSpaceAwesome />,
-    "Font In Use": <ImFont />,
-    "What Font Is": <CiSearch />,
-    "Pousse ta fonte": <FiPenTool />,
+  const handleThemeToggle = () => {
+    setIsDarkMode(!isDarkMode);
   };
 
   const handleSearch = (query) => {
     setSearchQuery(query);
     if (query.length > 0) {
-      const filteredSuggestions = typographyResources
+      const filteredSuggestions = resources
         .filter((resource) =>
           resource.title.toLowerCase().includes(query.toLowerCase())
         )
@@ -99,71 +64,129 @@ const Typography = () => {
     }
   };
 
-  const filteredResources = typographyResources.filter((resource) =>
+  const filteredResources = resources.filter((resource) =>
     resource.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
-  const handleBackClick = () => {
-    navigate(-1); // Navigate to the previous page
-  };
 
+  // const handleBackClick = () => {
+  //   navigate(-1); // Navigate to the previous page
+  // };
 
   return (
-    <div className="app-container">
-      <Navbar onSearch={handleSearch} />
-      <div className="flex justify-start sm:mt-28 mt-24 sm:pl-20 pl-6">
-        <button 
-          onClick={handleBackClick} 
-          className="flex items-center text-white bg-black px-3 py-2 rounded-lg hover:bg-gray-700 transition duration-200"
+    <div
+      className={`app-container ${
+        isDarkMode ? "bg-[#141414] text-white" : "bg-[#F5F5F4] text-black"
+      }`}
+    >
+      <Navbar
+        isDarkMode={isDarkMode}
+        handleThemeToggle={handleThemeToggle}
+        onSearch={handleSearch}
+      />
+
+      {/* Breadcrumbs */}
+      <div className="breadcrumbs fixed flex justify-between items-center sm:mt-26 mt-24 sm:pl-40 ml-2 pl-6 pr-6 sm:pr-36">
+        <ul className="flex space-x-1">
+          <li>
+            <a
+              href="/home"
+              className="flex items-center space-x-1 text-gray-300 hover:text-gray-400"
+            >
+              <span className="no-underline">Home</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/typography"
+              className="flex items-center space-x-1 text-gray-300 hover:text-gray-400"
+            >
+              <span className="no-underline">Typography</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* BBack Button */}
+      {/* <div className="flex justify-between items-center sm:mt-28 mt-24 sm:pl-36 ml-2 pl-6 pr-6 sm:pr-36">
+        <button
+          onClick={handleBackClick}
+          className="flex items-center px-3 py-2 rounded-lg transition duration-200"
         >
           <FaArrowLeft className="mr-2" />
           Back
         </button>
-      </div>
-      <div className="main-content">
-        <h1 className="text-center text-white text-2xl -sm:mt-0 -mt-10 sm:text-3xl font-bold">
-          Typography
-        </h1>
-        {/* <p className="text-center text-gray-300 text-lg mt-2 sm:text-xl">
-        Discover Perfect Font Pairs with These Top Free Typography Websites
-        </p> */}
+      </div> */}
 
-        <div className="relative text-sm sm:mt-10 mt-8 w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto sm:mb-24 mb-12">
-          <div className="absolute inset-y-0 left-0 pl-10 sm:pl-5 flex items-center pointer-events-none">
-            <FaSearch className="text-gray-500" /> {/* React Icon for search */}
+      <div className="main-content text-center">
+        <h1 className="text-xl sm:text-5xl sm:mt-26 mt-24 font-bold sm:font-bold pl-4 pr-4 poly-regular leading-[2rem] sm:leading-[3.2rem]">
+          <span className="text-xl sm:text-5xl sm:mt-28 mt-24 font-bold sm:font-normal pl-4 pr-4 poly-regular leading-[2rem] sm:leading-[3.2rem]">
+            <span>
+            Typography{" "}
+              {/* <span className="inline-block">
+                <BsStars className="text-yellow-400" />
+              </span>{" "} */}
+            </span>
+          </span>
+        </h1>
+
+        <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-lg mx-auto sm:mt-18 mt-12  sm:mb-24 mb-12">
+          <div className="absolute inset-y-0 left-0 pl-12 sm:pl-6 flex items-center pointer-events-none">
+            <FaSearch className="text-gray-500" />
           </div>
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => handleSearch(e.target.value)}
             placeholder="Search Tools & Resources"
-            className="pl-12 sm:pt-3 pt-4 sm:w-full w-72 px-5 py-3 border rounded-full focus:outline-none focus:ring-1 focus:ring-zinc-500"
+            className="pl-16 sm:pl-14 sm:w-full bg-white dark:bg-white px-16 sm:px-16 py-3 sm:py-4 border rounded-full focus:outline-none focus:ring-1 focus:ring-zinc-500"
           />
         </div>
       </div>
 
-      <div className=" cards cards-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+      <div
+        className={`cards cards-container ${
+          isDarkMode ? "bg-[#141414] text-white" : "bg-[#F5F5F4] text-black"
+        } grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4 sm:px-0 py-8`}
+      >
         {filteredResources.length > 0 ? (
           filteredResources.map((resource) => (
             <a
               key={resource.id}
               href={resource.link}
-              className="card border p-4 rounded shadow flex flex-col items-center justify-center transition-all duration-300 hover:bg-black hover:text-white text-center"
+              className={`card border p-4 rounded shadow-lg flex flex-col items-center transition-all duration-300 ${
+                isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"
+              }`}
             >
-              <div className="text-4xl mb-4">
-                {titleToIconMap[resource.title] || <FaFonticonsFi />}{" "}
-                {/* Default icon if title not found */}
-              </div>
-              <h2 className="text-sm font-bold mb-4 p-2 rounded-2xl">
-                {resource.title}
-              </h2>
+              <img
+                src={resource.avatar}
+                alt={resource.title}
+                className="w-14 h-auto rounded-full"
+              />
+              <h2 className="text-2xl font-semibold  mt-5">{resource.title}</h2>
+              {/* <p className="text-sm font-semibold mt-3">
+                {resource.discription}
+              </p> */}
+              {/* <div className="mt-5">
+                <button
+                  className="align-left w-full px-4 py-2 text-sm font-medium text-center text-[#93e003] bg-zinc-800  rounded-xl"
+                  type="button"
+                >
+                  Use This
+                </button>
+              </div> */}
             </a>
           ))
         ) : (
-          <div className="text-center mt-10">No results found</div>
+          <div className=" text-center justify-center">No results found</div>
         )}
       </div>
 
-      <Footer />
+      <div className={isDarkMode ? "dark" : ""}>
+        {/* Your content here */}
+        <ScrollToTopButton isDarkMode={isDarkMode} />
+      </div>
+
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 };

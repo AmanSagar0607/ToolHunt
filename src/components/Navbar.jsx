@@ -2,63 +2,88 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { VscCoffee } from "react-icons/vsc";
 import { FaBars, FaTimes } from "react-icons/fa";
-// import { hevronDown } from "react-icons/fa";
+import { ImSun } from "react-icons/im";
+import { IoMoonOutline } from "react-icons/io5";
 import PropTypes from "prop-types";
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, handleThemeToggle }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [toolsDropdownOpen, setToolsDropdownOpen] = useState(false);
+  const [rotateIcon, setRotateIcon] = useState(false);
+  
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // const toggleToolsDropdown = () => {
-  //   setToolsDropdownOpen(!toolsDropdownOpen);
-  // };
+  const toggleTheme = () => {
+    handleThemeToggle();
+    setRotateIcon(!rotateIcon); // Toggle rotation
+  };
 
   return (
     <nav
-      className={`navbar flex items-center justify-between p-4 text-white ${
-        menuOpen ? "bg-black" : ""
-      }`}
+      className={`navbar flex items-center justify-between p-4 rounded-2xl ${
+        menuOpen
+          ? isDarkMode
+            ? "bg-zinc-800 text-white"
+            : "bg-white text-black"
+          : isDarkMode
+          ? "bg-zinc-900 text-white"
+          : " text-black bg-white dark:bg-gray-900/5 backdrop-blur-md border border-white/25 dark:border-black/25 shadow-md "
+      } border-b-1 ${
+        isDarkMode ? "border-gray-700" : "border-gray-200"
+      } transition-colors duration-100 ease-in-out `}
     >
       <Link
         to="/"
-        className="sm:text-2l text-2xl font-bold bg-gradient-to-tl from-slate-400 via-violet-500 to-zinc-400 bg-clip-text text-transparent no-underline"
+        className={`sm:text-3xl text-2xl font-bold lobster-regular leading-[2rem] rounded-xl pl-2 pr-2 pt-1 pb-1 ${
+          isDarkMode ? "text-[#93e003]" : "text-[#93e003]"
+        }`}
       >
-        ToolHunt
+        Th
       </Link>
 
-      <div className="hidden md:flex items-center space-x-4 -mr-12">
-        <Link to="/" className="no-underline hover:text-gray-300">
+      <div className="hidden md:flex items-center text-lg tracking-wider space-x-8 ml-32 ">
+        <Link to="/home" className="no-underline hover:text-gray-300">
           Home
         </Link>
-        <Link to="https://buymeacoffee.com/amansagar" className="no-underline hover:text-gray-300">
-          <a
-            href="https://buymeacoffee.com/amansagar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="py-2 text-link no-underline"
-            title="Buy me a coffee"
+        <a
+          href="https://forms.gle/jbuSLLtW2ATke3649"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="no-underline hover:text-gray-300"
+        >
+          Submit Tool
+        </a>
+        <a
+          href="https://buymeacoffee.com/amansagar"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="py-2 text-link no-underline"
+          title="Buy me a coffee"
+        >
+          <VscCoffee
+            className={`h-6 w-6 ${isDarkMode ? "text-white" : "text-black"}`}
+          />
+        </a>
+
+        <button
+          onClick={toggleTheme}
+          className="text-lg flex items-center justify-center p-2 rounded-lg transition-transform transform hover:scale-105"
+          title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        >
+          <div
+            className={`transition-transform duration-300 ease-in-out ${
+              rotateIcon ? "rotate-0" : "rotate-180"
+            }`}
           >
-            <VscCoffee className="h-7 w-7" />
-          </a>
-        </Link>
-        {/* <div className="relative">
-          <button
-            onClick={toggleToolsDropdown}
-            className="flex items-center space-x-2 space-y-1 no-underline hover:text-gray-300"
-          >
-            <span>Other Tools</span>
-            <FaChevronDown className={`transition-transform ${toolsDropdownOpen ? 'rotate-180' : ''}`} />
-          </button>
-          {toolsDropdownOpen && (
-            <div className="absolute top-full left-0 mt-2 bg-zinc-950 text-white rounded shadow-lg w-48">
-              <Link to="/passgen" className="block px-16 justify-center py-2 hover:bg-zinc-900 no-underline">PassGen</Link>
-            </div>
-          )}
-        </div> */}
+            {isDarkMode ? (
+              <ImSun className="transition-transform duration-300 ease-in-out" />
+            ) : (
+              <IoMoonOutline className="transition-transform duration-300 ease-in-out" />
+            )}
+          </div>
+        </button>
       </div>
 
       <div className="flex items-center space-x-4">
@@ -66,7 +91,7 @@ const Navbar = () => {
           href="https://www.producthunt.com/posts/toolhunt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-toolhunt"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:block text-sm" // Hide on small devices, show on medium and larger
+          className="hidden md:block text-sm"
         >
           <img
             src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=478083&theme=dark"
@@ -83,7 +108,11 @@ const Navbar = () => {
       </div>
 
       {menuOpen && (
-        <div className="absolute top-20 pb-14 left-0 w-full bg-gray-400 flex flex-col items-center md:hidden z-50">
+        <div
+          className={`absolute top-20 p-6 text-lg font-normal left-0 w-full flex flex-col items-center md:hidden z-50 ${
+            isDarkMode ? "bg-zinc-800 rounded-t-3xl rounded-b-3xl" : "bg-white text-black rounded-t-3xl rounded-b-3xl"
+          }`}
+        >
           <Link
             to="/"
             className="py-2 no-underline hover:text-gray-400"
@@ -91,21 +120,23 @@ const Navbar = () => {
           >
             Home
           </Link>
-          {/* <div className="relative">
-            <button
-              onClick={toggleToolsDropdown}
-              className="py-2 no-underline hover:text-gray-200 flex items-center space-x-2"
-            >
-              <span>Other Tools</span>
-              <FaChevronDown className={`transition-transform ${toolsDropdownOpen ? 'rotate-180' : ''}`} />
-            </button>
-            {toolsDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 bg-black text-white rounded shadow-lg w-full">
-                <Link to="/passgen" className="block px-4 py-2 hover:bg-gray-700 no-underline">PassGen</Link>
-                <Link to="/tool2" className="block px-4 py-2 hover:bg-gray-700 no-underline">Tool 2</Link>
-              </div>
-            )}
-          </div> */}
+          <a
+            href="https://forms.gle/jbuSLLtW2ATke3649"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-2 no-underline hover:text-gray-400"
+            onClick={toggleMenu}
+          >
+            Submit Tool
+          </a>
+          <Link
+            to="/"
+            className="py-2 no-underline hover:text-gray-400"
+            onClick={toggleMenu}
+          >
+            ToolHunt
+          </Link>
+
           <a
             href="https://buymeacoffee.com/amansagar"
             target="_blank"
@@ -113,14 +144,34 @@ const Navbar = () => {
             className="py-2 text-link no-underline"
             title="Buy me a coffee"
           >
-            <VscCoffee className="h-7 w-7" />
+            <VscCoffee
+              className={`h-6 w-6 ${isDarkMode ? "text-white" : "text-black"}`}
+            />
           </a>
+
+          <button
+            onClick={toggleTheme}
+            className="text-lg flex items-center justify-center p-2 rounded-lg transition-transform transform hover:scale-105 mt-2"
+            title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            <div
+              className={`transition-transform duration-300 ease-in-out ${
+                rotateIcon ? "rotate-0" : "rotate-180"
+              }`}
+            >
+              {isDarkMode ? (
+                <ImSun className="transition-transform duration-300 ease-in-out" />
+              ) : (
+                <IoMoonOutline className="transition-transform duration-300 ease-in-out" />
+              )}
+            </div>
+          </button>
 
           <a
             href="https://www.producthunt.com/posts/toolhunt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-toolhunt"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm mt-1"
+            className="mt-4"
           >
             <img
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=478083&theme=dark"
@@ -137,7 +188,8 @@ const Navbar = () => {
 };
 
 Navbar.propTypes = {
-  onSearch: PropTypes.func.isRequired,
+  isDarkMode: PropTypes.bool.isRequired,
+  handleThemeToggle: PropTypes.func.isRequired,
 };
 
 export default Navbar;

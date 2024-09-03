@@ -14,7 +14,7 @@ const Footer = ({ isDarkMode }) => {
           <span className="sm:inline text-sm font-normal">
             Developed by{' '}
             <a
-              href="https://linktr.ee/amansagar0607"
+              href="https://bento.me/amansagar"
               className={`hover:underline ${
                 isDarkMode ? 'text-gray-400' : 'text-gray-600'
               }`}
@@ -27,7 +27,7 @@ const Footer = ({ isDarkMode }) => {
 
       <div className="social-links flex gap-5">
         <a
-          href="https://twitter.com/AmanSagar0607"
+          href="https://x.com/toolhunt_"
           rel="noopener noreferrer"
           className="text-lg"
         >

@@ -1,4 +1,5 @@
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { RiTwitterXLine } from "react-icons/ri";
 import PropTypes from 'prop-types';
 
 const Footer = ({ isDarkMode }) => {
@@ -31,7 +32,7 @@ const Footer = ({ isDarkMode }) => {
           rel="noopener noreferrer"
           className="text-lg"
         >
-          <FaTwitter
+          <RiTwitterXLine
             className={`footer-icon transition-colors duration-300 ${
               isDarkMode ? 'text-gray-300 hover:text-white' : 'text-black hover:text-gray-900'
             }`}

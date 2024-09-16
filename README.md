@@ -1,4 +1,4 @@
-# ToolHunt
+# ToolHunt - Tool Resources Finder
 
 ![ToolHunt Banner](./src/assets/header.png)
 

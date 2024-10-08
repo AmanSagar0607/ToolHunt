@@ -51,6 +51,8 @@ To get started with ToolHunt, follow these steps:
 - **Explore Categories**: Browse through different categories to discover tools tailored to your needs.
 - **View Details**: Click on a tool to view more details and links to access the tool.
 - **Save Favorites**: Mark tools as favorites for easy access later.
+- **Contribute**: Submit the tool/resources.
+
 
 ## Contributing
 

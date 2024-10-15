@@ -270,7 +270,7 @@ const Inspiration = () => {
       />
 
       {/* Breadcrumbs */}
-      <div className="breadcrumbs fixed flex justify-between items-center sm:mt-26 mt-24 sm:pl-40 ml-2 pl-6 pr-6 sm:pr-36">
+      <div className="breadcrumbs fixed flex justify-between items-center sm:mt-26 mt-24 sm:pl-8 lg:pl-40  ml-2 pl-6 pr-6 sm:pr-36">
         <ul className="flex space-x-1">
           <li>
             <a

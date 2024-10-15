@@ -42,7 +42,7 @@ const Colors = () => {
       title: "Colorlisa",
       link: "https://colorlisa.com",
       avatar:
-        "https://scontent.fbho6-1.fna.fbcdn.net/v/t39.30808-1/326567070_1568176070316261_4953735278396960283_n.png?stp=dst-png_s200x200&_nc_cat=103&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=x9165e1UTxYQ7kNvgEfhTEJ&_nc_ht=scontent.fbho6-1.fna&oh=00_AYA4def0XrHmmkfvKQVwhv7xZvHByy5hOz7LnfZDar-y_g&oe=66D70C60",
+        "https://scontent.fidr1-1.fna.fbcdn.net/v/t39.30808-6/326567070_1568176070316261_4953735278396960283_n.png?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=0nE5AdRs_t4Q7kNvgGPyBrx&_nc_ht=scontent.fidr1-1.fna&_nc_gid=AeyH4gSS3kaTZVGaDWFB8i2&oh=00_AYDyT_wfq33HjZ_IICcOM63bhUtPqyRbzve7_MQgoaMVjw&oe=6713F89E",
     },
     {
       id: 5,

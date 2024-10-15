@@ -98,7 +98,7 @@ const Nocode = () => {
       title: "Notion",
       description: "A cart platform to create high-converting sales funnels without coding.",
       link: "https://makewithnotion.com/",
-      avatar: "https://pbs.twimg.com/profile_images/1758577713349369856/gWbJqT2L_400x400.jpg",
+      avatar: "https://pbs.twimg.com/profile_images/1843300967082508288/QnIhb2jI_400x400.jpg",
     },
       
     {

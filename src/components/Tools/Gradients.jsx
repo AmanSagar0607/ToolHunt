@@ -87,7 +87,7 @@ const Gradients = () => {
         "Hand-crafted collection of mesh gradients for designers and developers.",
       link: "https://zeusjones.com",
       avatar:
-        "https://scontent.fbho6-1.fna.fbcdn.net/v/t39.30808-1/241758580_823867768328398_1705715497418525872_n.jpg?stp=dst-jpg_s200x200&_nc_cat=108&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=fqB7JDhRvR0Q7kNvgGRE3dG&_nc_ht=scontent.fbho6-1.fna&oh=00_AYCwozd8PLF5UQHs4bj8FxpSNkujh5RNY4xh74ESDxowEQ&oe=66D73A46",
+        "https://scontent.cdninstagram.com/v/t51.2885-19/61863783_460990344702464_3024560564488634368_n.jpg?stp=cp0_dst-jpg_s110x80&_nc_cat=104&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=e7tD2ViX7BoQ7kNvgGFfp5O&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AYAszXeEAF8OIx8ZEs8Cv_0x2V50F45lMMoSneoDPa1IMg&oe=67140B10",
     },
     // { id: 18, title: "SaaS Pages", link: "https://saaspages.xyz" }, design pattern
     {
@@ -95,7 +95,7 @@ const Gradients = () => {
       title: "Thirst",
       link: "https://thirstcraft.com",
       avatar:
-        "https://scontent.cdninstagram.com/v/t51.2885-19/359696683_1011550263534412_293599298604543906_n.jpg?stp=cp0_dst-jpg_s110x80&_nc_cat=103&ccb=1-7&_nc_sid=fcb8ef&_nc_ohc=eozIJJAW4QgQ7kNvgHvdU78&_nc_ht=scontent.cdninstagram.com&_nc_gid=AOzfV8stRip0PgM1xnpQ5ga&oh=00_AYCb5_mxIkfmFZLFBN5PUchAYsd8m3gkAXIIvUhzFKNZ1A&oe=66D73703",
+        "https://scontent.cdninstagram.com/v/t51.2885-19/359696683_1011550263534412_293599298604543906_n.jpg?stp=cp0_dst-jpg_s110x80&_nc_cat=103&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=QP7y4RJJzSUQ7kNvgFPoo9W&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AYDCI8RB2h2TmBis6gi-QwEakALH3JiDBWraUxWJoKpsQA&oe=67141443",
     },
     {
       id: 11,
@@ -157,7 +157,7 @@ const Gradients = () => {
       title: "Charcodesign",
       link: "https://www.charco.design/",
       avatar:
-        "https://scontent.cdninstagram.com/v/t51.2885-19/272823672_1127014884793732_8422673432899473257_n.jpg?stp=cp0_dst-jpg_s110x80&_nc_cat=105&ccb=1-7&_nc_sid=fcb8ef&_nc_ohc=g-3w_8be_EgQ7kNvgGx_x1B&_nc_ht=scontent.cdninstagram.com&oh=00_AYChwPOavqR9fo7sBPN1JYVL9iQu6kjuMgMqQ4ni5jw_tQ&oe=66D73F57",
+        "https://scontent.cdninstagram.com/v/t51.2885-19/272823672_1127014884793732_8422673432899473257_n.jpg?stp=cp0_dst-jpg_s110x80&_nc_cat=105&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=n22qWIZ6iF4Q7kNvgEz9_l3&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AYAlIUvI1_TQHvyiPWx72HIGtkGDn9yA4H5_o-AbjHrcHA&oe=67141C97",
     },
     {
       id: 20,

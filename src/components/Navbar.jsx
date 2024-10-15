@@ -67,7 +67,7 @@ const Navbar = ({ isDarkMode, handleThemeToggle }) => {
           />
         </a>
 
-        <button
+        {/* <button
           onClick={toggleTheme}
           className="text-lg flex items-center justify-center p-2 rounded-lg transition-transform transform hover:scale-105"
           title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
@@ -83,7 +83,7 @@ const Navbar = ({ isDarkMode, handleThemeToggle }) => {
               <IoMoonOutline className="transition-transform duration-300 ease-in-out" />
             )}
           </div>
-        </button>
+        </button> */}
       </div>
 
       <div className="flex items-center space-x-4">
@@ -149,7 +149,7 @@ const Navbar = ({ isDarkMode, handleThemeToggle }) => {
             />
           </a>
 
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="text-lg flex items-center justify-center p-2 rounded-lg transition-transform transform hover:scale-105 mt-2"
             title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
@@ -165,7 +165,7 @@ const Navbar = ({ isDarkMode, handleThemeToggle }) => {
                 <IoMoonOutline className="transition-transform duration-300 ease-in-out" />
               )}
             </div>
-          </button>
+          </button> */}
 
           <a
             href="https://www.producthunt.com/posts/toolhunt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-toolhunt"

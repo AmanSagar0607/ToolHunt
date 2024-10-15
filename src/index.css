@@ -8,6 +8,7 @@ html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  
 }
 
 .app-container {
@@ -146,8 +147,8 @@ label {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: calc(100% - 20rem); /* Adjust width to account for larger screens */
-  margin: 1.5rem 10rem; /* Add margin for spacing */
+  width: calc(100% - 4rem); /* Adjust width to account for larger screens */
+  margin: 1.5rem 2rem; /* Add margin for spacing */
   top: 0;
   z-index: 100;
 }

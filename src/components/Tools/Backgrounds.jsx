@@ -56,7 +56,7 @@ const Backgrounds = () => {
       title: "WowPatterns",
       description: "Discover our 500+ best quality vector and seamless patterns. Latest free vector images and backgrounds with Ai and EPS file formats",
       link: "https://wowpatterns.com",
-      avatar: "https://scontent.fbho6-1.fna.fbcdn.net/v/t39.30808-1/433732011_959301545901582_4742315470583632436_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=V36CxfUhgNQQ7kNvgE5prj2&_nc_ht=scontent.fbho6-1.fna&_nc_gid=AcEIugMiE0pepEqhIQM9UAY&oh=00_AYD1HDEHxE4TWBeV1UzOA4aBufx1FDRL57T7U8uc88z0Aw&oe=66D73955",
+      avatar: "https://scontent.fbho6-1.fna.fbcdn.net/v/t39.30808-1/433732011_959301545901582_4742315470583632436_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=gHSckxH7y5kQ7kNvgHDT3mm&_nc_ht=scontent.fbho6-1.fna&_nc_gid=AlFyOh6JtzCOIyk-2i7ESp5&oh=00_AYCIhB61PFVuHPYZ6_bq9RReb4Ci-lIuijGIm4KYVE4qog&oe=67141695",
     },
     {
       id: 7,

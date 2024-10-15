@@ -1,8 +1,8 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import { FaMoon } from "react-icons/fa";
-import { ImSun } from "react-icons/im";
+// import { FaMoon } from "react-icons/fa";
+// import { ImSun } from "react-icons/im";
 import { VscCoffee } from "react-icons/vsc";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoMoonOutline } from "react-icons/io5";
@@ -106,7 +106,7 @@ const Landing = () => {
               className={`h-6 w-6 ${isDarkMode ? "text-white" : "text-black"}`}
             />
           </a>
-
+{/* 
           <button
             onClick={handleThemeToggle}
             className="text-lg flex items-center justify-center p-2 rounded-lg transition-transform transform hover:scale-105"
@@ -117,7 +117,7 @@ const Landing = () => {
             ) : (
               <FaMoon className="transition-transform duration-300 ease-in-out" />
             )}
-          </button>
+          </button> */}
         </div>
 
         <div className="flex items-center space-x-4">
@@ -185,7 +185,7 @@ const Landing = () => {
               />
             </a> */}
 
-             <button
+             {/* <button
               onClick={toggleTheme}
               className="text-lg flex items-center justify-center p-2 rounded-lg transition-transform transform hover:scale-105 mt-2"
               title={
@@ -203,7 +203,7 @@ const Landing = () => {
                   <IoMoonOutline className="transition-transform duration-300 ease-in-out" />
                 )}
               </div>
-            </button> 
+            </button>  */}
 
             <a
               href="https://www.producthunt.com/posts/toolhunt?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-toolhunt"
@@ -237,10 +237,10 @@ const Landing = () => {
           </a>
         </div>
 
-        <h1 className="text-2xl sm:text-7xl mt-10 sm:mt-10 font-thin sm:font-thin pl-4 pr-4 raleway-bold leading-[2rem] sm:leading-[5rem]">
+        <h1 className="text-sm sm:text-3xl mt-10 sm:mt-10 font-thin sm:font-thin xl:text-4xl pl-4 pr-4 raleway-bold leading-[2rem] sm:leading-[2rem]">
           Unlock your project&#39;s Potential for{" "}
           <br className="block sm:block" />
-          <span className="text-5xl sm:text-7xl py-2 sm:block mt-1 sm:font-bold  sm:mt-0 leading-4.5rem] sm:leading-[4.5rem] ">
+          <span className="text-3xl sm:text-5xl lg:text-7xl py-2 sm:block mt-1 sm:font-bold  sm:mt-0 leading-4.5rem] sm:leading-[4.5rem] ">
             Designers & Developers
           </span>
           {/* <br className="hidden sm:block" /> */}
@@ -255,7 +255,7 @@ const Landing = () => {
         </h1> */}
 
         <h2
-          className={`text-center text-sm sm:text-lg mt-8 sm:mt-10 font-semi-bold px-1 poly-regular ${
+          className={`text-center text-sm lg:text-lg sm:text-sm  mt-4 sm:mt-2 font-semi-bold px-1 poly-regular ${
             isDarkMode ? "text-gray-100" : "text-black"
           }`}
         >
@@ -282,7 +282,7 @@ const Landing = () => {
               ></span>
             </span>
             <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-[#93e003] rounded-xl group-hover:bg-[#93e0030] group-hover:mb-12 group-hover:translate-x-0"></span>
-            <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white poly-regular">
+            <span className="relative w-full text-left text-sm sm:text-lg lg:text-xl text-white transition-colors duration-200 ease-in-out group-hover:text-white poly-regular">
               Get Started
             </span>
           </a>

@@ -2,23 +2,23 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { VscCoffee } from "react-icons/vsc";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { ImSun } from "react-icons/im";
-import { IoMoonOutline } from "react-icons/io5";
+// import { ImSun } from "react-icons/im";
+// import { IoMoonOutline } from "react-icons/io5";
 import PropTypes from "prop-types";
 
-const Navbar = ({ isDarkMode, handleThemeToggle }) => {
+const Navbar = ({ isDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [rotateIcon, setRotateIcon] = useState(false);
+  // const [rotateIcon, setRotateIcon] = useState(false);
   
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const toggleTheme = () => {
-    handleThemeToggle();
-    setRotateIcon(!rotateIcon); // Toggle rotation
-  };
+  // const toggleTheme = () => {
+  //   handleThemeToggle();
+  //   setRotateIcon(!rotateIcon); // Toggle rotation
+  // };
 
   return (
     <nav

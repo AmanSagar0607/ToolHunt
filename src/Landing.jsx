@@ -5,16 +5,16 @@ import { FaGithub } from "react-icons/fa";
 // import { ImSun } from "react-icons/im";
 import { VscCoffee } from "react-icons/vsc";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { IoMoonOutline } from "react-icons/io5";
+// import { IoMoonOutline } from "react-icons/io5";
 
 const Landing = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode] = useState(true);
   // const [text, setText] = useState("");
   // const [index, setIndex] = useState(0);
   // const [phraseIndex, setPhraseIndex] = useState(0);
-  const [rotateIcon, setRotateIcon] = useState(false);
+  // const [rotateIcon, setRotateIcon] = useState(false);
 
   // Memoize the phrases array so it doesn't change on every render
   // const phrases = useMemo(
@@ -46,14 +46,14 @@ const Landing = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-  const toggleTheme = () => {
-    handleThemeToggle();
-    setRotateIcon(!rotateIcon); // Toggle rotation
-  };
-  const handleThemeToggle = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
-  };
+  // const toggleTheme = () => {
+  //   handleThemeToggle();
+  //   setRotateIcon(!rotateIcon); // Toggle rotation
+  // };
+  // const handleThemeToggle = () => {
+  //   setIsDarkMode(!isDarkMode);
+  //   document.documentElement.classList.toggle("dark", !isDarkMode);
+  // };
 
   return (
     <div

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
-=======
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { SiBento } from "react-icons/si";
+import {  FaLinkedin, FaGithub } from 'react-icons/fa';
 import { RiTwitterXLine } from "react-icons/ri";
->>>>>>> 9c238a0484b9a8eb8fcf72ce01f44424659b41c6
 import PropTypes from 'prop-types';
 
 const Footer = ({ isDarkMode }) => {
@@ -37,6 +34,18 @@ const Footer = ({ isDarkMode }) => {
           className="text-lg"
         >
           <RiTwitterXLine
+            className={`footer-icon transition-colors duration-300 ${
+              isDarkMode ? 'text-gray-300 hover:text-white' : 'text-black hover:text-gray-900'
+            }`}
+          />
+        </a>
+        <a
+          href="https://bento.me/amansagar"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-lg"
+        >
+          <SiBento 
             className={`footer-icon transition-colors duration-300 ${
               isDarkMode ? 'text-gray-300 hover:text-white' : 'text-black hover:text-gray-900'
             }`}

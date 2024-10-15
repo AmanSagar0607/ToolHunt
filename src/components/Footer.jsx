@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+=======
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { RiTwitterXLine } from "react-icons/ri";
+>>>>>>> 9c238a0484b9a8eb8fcf72ce01f44424659b41c6
 import PropTypes from 'prop-types';
 
 const Footer = ({ isDarkMode }) => {
@@ -14,7 +19,7 @@ const Footer = ({ isDarkMode }) => {
           <span className="sm:inline text-sm font-normal">
             Developed by{' '}
             <a
-              href="https://linktr.ee/amansagar0607"
+              href="https://bento.me/amansagar"
               className={`hover:underline ${
                 isDarkMode ? 'text-gray-400' : 'text-gray-600'
               }`}
@@ -27,11 +32,11 @@ const Footer = ({ isDarkMode }) => {
 
       <div className="social-links flex gap-5">
         <a
-          href="https://twitter.com/AmanSagar0607"
+          href="https://x.com/toolhunt_"
           rel="noopener noreferrer"
           className="text-lg"
         >
-          <FaTwitter
+          <RiTwitterXLine
             className={`footer-icon transition-colors duration-300 ${
               isDarkMode ? 'text-gray-300 hover:text-white' : 'text-black hover:text-gray-900'
             }`}
